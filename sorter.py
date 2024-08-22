@@ -5,11 +5,16 @@ import time
 def organize_files(directory, include_old_files):
     # these are all the defined file types that will get sorted
     file_types = {
-        'Images': ['jpg', 'jpeg', 'png', 'gif'],
-        'Documents': ['pdf', 'docx', 'txt', 'xlsx'],
-        'Music': ['mp3', 'wav'],
-        'Videos': ['mp4', 'avi', 'mov'],
-        'Archives': ['zip', 'tar', 'gz', 'rar', '7zip']
+        'Images': ['jpg', 'jpeg', 'png', 'gif', 'svg', 'eps', 'ai', 'raw', 'nef', 'cr2', 'dng'],
+        'Documents': ['pdf', 'docx', 'txt', 'xlsx', 'ppt', 'pptx', 'csv', 'ods', 'epub', 'mobi', 'azw', 'md'],
+        'Music': ['mp3', 'wav', 'flac', 'alac', 'aac', 'ogg'],
+        'Videos': ['mp4', 'avi', 'mov', 'webm', 'mkv', 'flv', 'ts'],
+        'Archives': ['zip', 'tar', 'gz', 'rar', '7zip', 'bz2', 'lz', 'lzma', 'iso', 'dmg'],
+        'Code': ['py', 'js', 'html', 'css', 'sh', 'bat', 'rb'],
+        'System': ['conf', 'ini', 'json', 'exe', 'app', 'bin'],
+        'Fonts': ['ttf', 'otf'],
+        'Logs': ['log'],
+        'Others': [] 
     }
     
     # This will create the sorted folders in the set cleaned directory
